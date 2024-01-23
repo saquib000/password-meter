@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" placeholder="password" v-model="password_field"/>
+        <p id="lowercase_check" v-bind:style="lowerCheck">alteast one lowercase character</p>
+
+        <p v-bind:style="upperCheck">alteast one uppercase character</p>
+        <p v-bind:style="numberCheck">alteast one number</p>
+        <p v-bind:style="specialCheck">alteast one special character</p>
+        <button v-on:click="login()">Login</button>
+        <p>Pass word strength: {{p_strength}}</p>
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
